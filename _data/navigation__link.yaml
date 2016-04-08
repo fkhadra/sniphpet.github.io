@@ -1,0 +1,8 @@
+- name: Home
+  uri: /
+  icon: <i class="material-icons">home</i>
+
+- name: About
+  uri: /about.html
+  icon: <i class="material-icons">info</i>
+

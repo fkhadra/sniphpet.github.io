@@ -1,0 +1,22 @@
+  ul.pagination {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin-top: 50px;
+    li{
+      &.pagination__page--is-active {
+        background-color: #2196F3;
+        color: #fff
+      }
+      a{
+       text-decoration: none;
+        color: initial; 
+      }
+      display: inline-block;
+      font-size: 1.2rem;
+      padding: 0 10px;
+      line-height: 30px;
+      border-radius: 2px;
+      text-align: center;
+    }
+  }

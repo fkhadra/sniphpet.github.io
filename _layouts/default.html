@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    {% include header.html %}
+
+    <main class="mdl-layout__content">
+        <div class="page-content container">
+            <div class="mdl-grid">
+                <div class="mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col posts__container">
+                    <div id="search__result"></div>
+                    <div id="page-container">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdl-layout-spacer"></div>
+        {% include footer.html %}
+    </main>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.7.0/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+</body>
+
+</html>

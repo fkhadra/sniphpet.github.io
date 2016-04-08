@@ -1,0 +1,26 @@
+/*
+* Media query for responsiveness
+*/
+
+@media only screen
+
+and (max-device-width : 500px)
+and (orientation : portrait),
+(min-device-width : 320px)
+and (max-device-width : 568px)
+{
+  .mdl-layout__drawer-button{
+    visibility: visible;
+  }
+  .hide-on-portrait{
+    display: none;
+  }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+  .mdl-textfield__input{
+    width: 90%;
+  }
+}

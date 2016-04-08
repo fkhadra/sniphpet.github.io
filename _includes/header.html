@@ -1,0 +1,22 @@
+<header class="mdl-layout__header">
+  <div class="mdl-layout__header-row header-row">
+    <a class="mdl-layout-title blog-title hide-on-portrait" href="{{ site.url }}">{{ site.title }}</a>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation hide-on-portrait">
+        {% for navLink in site.data.navigation__link %}
+        <a class="mdl-navigation__link{% if navLink.uri == page.uri %} is-active{% endif %}" href="{{ navLink.uri }}"> {{ navLink.icon }} {{ navLink.name }}</a>
+        {% endfor %}
+      </nav>
+      <nav class="mdl-navigation">
+        {% include search__input.html %}
+      </nav>
+  </div>
+</header>
+  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <a class="mdl-layout-title blog-title" href="{{ site.url }}">{{ site.title }}</a>
+    <nav class="mdl-navigation">
+      {% for navLink in site.data.navigation__link %}
+      <a class="mdl-navigation__link{% if navLink.uri == page.uri %} is-active{% endif %}" href="{{ navLink.uri }}"> {{ navLink.icon }} {{ navLink.name }}</a>
+      {% endfor %}
+    </nav>
+  </div>
