@@ -6,7 +6,7 @@ uri: /about.html
 # The face beyond the screen
 
 <div class='about__pic center'>
-<img src='http://sniphpet.lh/img/gugu.png' alt="That's me !">
+<img src='/img/gugu.png' alt="That's me !">
 </div>
 
 Hello I'm Fadi, a 25 year old developer. I live in Brussels.
