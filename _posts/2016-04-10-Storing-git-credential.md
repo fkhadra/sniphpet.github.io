@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Store your git credential
-date: 2016-04-09
+date: 2016-04-10 19:54:48 +0000
 disqus_id: dis570aab59df524
 permalink: store-git-credential
 tags:
