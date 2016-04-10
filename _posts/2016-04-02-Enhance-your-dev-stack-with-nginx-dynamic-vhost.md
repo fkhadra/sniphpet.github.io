@@ -192,5 +192,3 @@ for the application folder name.
  
 If you are using vagrant with Windows host don't forget to update your host file or use a tool to forward DNS requests.
 For *nix user I suggest you to use [dnsmasq](http://www.thekelleys.org.uk/dnsmasq/doc.html) to forward all requests.
-
-Thank you for reading.
