@@ -13,8 +13,6 @@ tags:
 
 Hello everyone, I released react-contexify. It allow you to add a context menu to your component.
 
-You can find all the details [here](https://sniphpet.github.io/react-contexify).
+You can find all the details at <a href="https://sniphpet.github.io/react-contexify" target="_blank">react-contexify</a> 
  
 Hope you enjoy it. I'm waiting for your feedback.
-
-
