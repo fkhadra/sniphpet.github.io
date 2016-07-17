@@ -24,7 +24,7 @@ is to set a git configuration value named **credential.helper**.
 {:toc}
 </div>
 
-### Storing
+## Storing
 -----------
 
 To permanently store your credential type :
@@ -41,14 +41,14 @@ By default, git credential are stored in a plain-text file. The default location
 $ git config --global credential.helper 'store --file /path/to/my/file'
 {% endhighlight %}  
 
-#### ... using osxkeychain 
+### ... using osxkeychain 
 
 To store your credential using osxkeychain the solution is straightforward :
 {% highlight bash %}
 $ git config --global credential.helper osxkeychain
 {% endhighlight %}  
 
-#### ... using wincred
+### ... using wincred
 
 Same as above but using wincred this time : 
 
@@ -56,7 +56,7 @@ Same as above but using wincred this time :
 $ git config --global credential.helper wincred
 {% endhighlight %}  
 
-### Caching ( my favorite choice )
+## Caching ( my favorite choice )
 ----------------------------------
 
 To cache your credential :

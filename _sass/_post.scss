@@ -1,14 +1,26 @@
 .posts__container{
+  max-width: $screenMaxWidth;
+  width: 100%;
  padding-bottom: 25px;
 }
 
-.post-meta {
-  color: #bbb;
-}
-.post-title {
-  a {
-    text-decoration: none;
-    color: rgb(80, 80, 80);
+.post {
+  padding: 25px;
+
+  h2{
+    margin: 24px 0 0 0;
+  }
+
+  &__meta{
+    color: #bbb;
+    margin: 16px 0;
+  }
+  &__title{
+    font-size: 45px;
+    a {
+      text-decoration: none;
+      color: rgb(80, 80, 80);
+    }
   }
 }
 .post-separator {
@@ -21,12 +33,7 @@
   }
 }
 
-.post-header{
-  margin: 30px;
-}
-.post-header, .post-button {
-  text-align: center;
-}
+
 ul.share-list{
   list-style: none;
   text-align: center;

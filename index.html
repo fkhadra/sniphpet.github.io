@@ -5,12 +5,12 @@ uri: /
 <div class="posts">
 
     {% for post in paginator.posts %}
-    <section class="post">
-        <header class="post-header">
-            <h2 class="post-title" itemprop="name headline">
+    <section class="post mdl-color--white mdl-shadow--4dp  mdl-color-text--grey-800">
+        <header class="post__header">
+            <h1 class="post__title" itemprop="name headline">
                 <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-            <p class="post-meta">
+            </h1>
+            <p class="post__meta">
                 <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">Posted on {{ post.date
                     | date: "%b %-d, %Y" }}
                 </time>
@@ -21,12 +21,13 @@ uri: /
 
             </p>
         </header>
-        <div class="post-content">
+        <div class="post__content">
             <p>
                 {{ post.content | strip_html | truncatewords: 30 }}
             </p>
         </div>
-        <div class="post-button">
+
+        <div class="post__button">
             <a
                     class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored center"
                     href="{{ post.url | prepend: site.baseurl }}"
@@ -46,13 +47,15 @@ uri: /
         {% if paginator.previous_page %}
         <li>
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                {% include pagination__previous-button.html %}
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
             </a>
         </li>
         {% else %}
         <li>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect" disabled>
-                <i class="material-icons">keyboard_arrow_left</i>
+                <i class="fa fa-chevron-left"></i>
             </button>
         </li>
         {% endif %}
@@ -75,13 +78,15 @@ uri: /
         {% if paginator.next_page %}
         <li>
             <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
-                {% include pagination__next-button.html %}
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
             </a>
         </li>
         {% else %}
         <li>
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect" disabled>
-                <i class="material-icons">keyboard_arrow_right</i>
+                <i class="fa fa-chevron-right"></i>
             </button>
         </li>
         {% endif %}

@@ -1,9 +1,14 @@
 body{
+  font-weight: 400;
+}
+p{
+  font-size: $baseFontSize;
+}
+
+body{
   background-color: #F9F9F9;
 }
-h1{
-  text-align: center;
-}
+
 .blog-title {
   text-decoration: none;
   color: inherit;
@@ -15,20 +20,17 @@ h1{
     content: ' }';
     font-size: 30px;
   }
+  font-size: 30px;
+  text-align: center;
+  padding: 17px;
 }
 .header-row{
   padding: 0 40px 0 40px;
 }
 
-.container {
-  max-width: $screenMaxWidth;
-  width: 100%;
-  margin: auto;
-}
-
 .mdl-layout__header-row {
   max-width: $screenMaxWidth;
-  width: 100%;
+  width: 96%;
   margin: auto !important;
 }
 
@@ -72,9 +74,6 @@ ul.mdl-mini-footer__link-list li {
   visibility: hidden;
 }
 
-.search__result-length, #page-container, #search__result{
-  padding: $contentPadding;
-}
 .about__pic img{
   width: 200px;
   height: 200px;

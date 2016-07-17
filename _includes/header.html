@@ -1,22 +1,45 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row header-row">
-    <a class="mdl-layout-title blog-title hide-on-portrait" href="{{ site.url }}">{{ site.title }}</a>
-      <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation hide-on-portrait">
-        {% for navLink in site.data.navigation__link %}
-        <a class="mdl-navigation__link{% if navLink.uri == page.uri %} is-active{% endif %}" href="{{ navLink.uri }}"> {{ navLink.icon }} {{ navLink.name }}</a>
-        {% endfor %}
-      </nav>
-      <nav class="mdl-navigation">
-        {% include search__input.html %}
-      </nav>
-  </div>
-</header>
-  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
-    <a class="mdl-layout-title blog-title" href="{{ site.url }}">{{ site.title }}</a>
-    <nav class="mdl-navigation">
+<aside class="side-bar hide-on-mobile">
+  <div class="side-bar__container">
+    <div>
+      <a class="mdl-layout-title blog-title" href="{{ site.url }}">{{ site.title }}</a>
+
+    </div>
+
+    <div>
+      {% include search__input.html  %}
+    </div>
+
+    <nav>
       {% for navLink in site.data.navigation__link %}
-      <a class="mdl-navigation__link{% if navLink.uri == page.uri %} is-active{% endif %}" href="{{ navLink.uri }}"> {{ navLink.icon }} {{ navLink.name }}</a>
+      <div class="side-bar__link">
+        <a alt="{{ navLink.alt }}" {% if navLink.target %} target="{{ navLink.target }}"  {% endif %} href="{{ navLink.uri }}"
+        class="{% if navLink.uri == page.uri %} is-active{% endif %}">
+          {{ navLink.icon }} {{ navLink.name }}
+        </a>
+      </div>
       {% endfor %}
     </nav>
   </div>
+</aside>
+<header class="show-on-mobile nav-bar">
+  <div class="nav-bar__title">
+    <i class="fa fa-bars" id="drawer-menu"></i>
+    <a class="mdl-layout-title blog-title" href="{{ site.url }}">{{ site.title }}</a>
+  </div>
+  <div class="nav-bar__search">
+    {% include search__input.html  %}
+  </div>
+</header>
+<div id="mobile-nav" class="mobile-nav">
+  <a href="#" class="mobile-nav__close"><i class="fa fa-close"></i></a>
+  <div class="mobile-nav__content">
+    {% for navLink in site.data.navigation__link %}
+    <div>
+      <a alt="{{ navLink.alt }}" {% if navLink.target %} target="{{ navLink.target }}"  {% endif %} href="{{ navLink.uri }}"
+         class="{% if navLink.uri == page.uri %} is-active{% endif %}">
+        {{ navLink.icon }} {{ navLink.name }}
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>

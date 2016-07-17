@@ -9,7 +9,8 @@
 title: Sniphpet
 email: fdkhadra@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Articles on Php, Javascript, web application in general
+  A dev blog covering web development in general.
+  Articles about javascript, php, software architecture and a lot more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://sniphpet.com" # the base hostname & protocol for your site
 enforce_ssl: sniphpet.com
@@ -23,3 +24,4 @@ markdown: kramdown
 
 # Gems
 gems: [jekyll-paginate, jemoji, jekyll-sitemap]
+exclude: ['vendor']

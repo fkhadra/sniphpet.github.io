@@ -1,0 +1,124 @@
+.side-bar{
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  width: $sideBarWidth;
+  background-color: #262626;
+  z-index: 100;
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,.14),
+  0 1px 10px 0 rgba(0,0,0,.12),
+  0 2px 4px -1px rgba(0,0,0,.2);
+  transition: all 0.6s;
+  &__container {
+    color: #ffffff;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+    }
+  }
+
+  &__container:not(footer){
+    padding: 50px;
+  }
+
+  &__link{
+    padding: 10px;
+    font-size: 20px;
+  i{
+    width: 28px; 
+  }
+    & a:hover, & a.is-active{
+      color: #00a4e4;
+    }
+  }
+}
+
+.container{
+  padding: 50px 0 80px $sideBarWidth;
+  &__grid{
+    margin-left: 0;
+  }
+}
+
+ul.pagination {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin-top: 50px;
+  li{
+    &.pagination__page--is-active {
+      background-color: #2196F3;
+      color: #fff
+    }
+    a{
+      text-decoration: none;
+      color: initial;
+    }
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+  }
+}
+
+.search{
+  input{
+    border-bottom-color: #ffffff;
+  }
+  label{
+    color: #ffffff;
+    font-size: 16px;
+  }
+}
+h1{
+  font-size: 45px;
+}
+h2{
+  font-size: 34px;
+}
+h3{
+  font-size: 24px;
+}
+
+table
+{
+  width: 100%;
+  font-size: 14px;
+  border-collapse:collapse;
+  margin:20px 0 0;
+  padding:0;
+}
+
+table tr
+{
+  border-top:1px solid #ccc;
+  background-color:#fff;
+  margin:0;
+  padding:0;
+}
+
+table tr:nth-child(2n)
+{
+  background-color:#f8f8f8;
+}
+table tr th[align="center"], table tr td[align="center"] {
+  text-align:center;
+}
+table tr th, table tr td
+{
+  border:1px solid #ccc;
+  text-align:left;
+  margin:0;
+  padding:6px 13px;
+}
+.fa-times{
+  color: #ff2222;
+}
+
+.fa-check{
+  color: #036A07;
+}

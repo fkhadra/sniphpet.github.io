@@ -1,8 +1,28 @@
-- name: Home
+- name: Latest Post
   uri: /
-  icon: <i class="material-icons">home</i>
+  icon: <i class="fa fa-newspaper-o"></i>
+  alt: Latest Post
 
 - name: About
   uri: /about.html
-  icon: <i class="material-icons">info</i>
+  icon: <i class="fa fa-user"></i>
+  about: About me
+
+#- name: Contact
+#  uri: /contact.html
+#  icon: <i class="fa fa-envelope"></i>
+#  alt: Contact me
+
+- name: Linkedin
+  uri: https://be.linkedin.com/in/fadikhadra
+  target: _blank
+  icon: <i class="fa fa-linkedin"></i>
+  alt: My linkedin account
+
+- name: Github
+  uri: https://github.com/sniphpet
+  target: _blank
+  icon: <i class="fa fa-github"></i>
+  alt: My github account
+
 
